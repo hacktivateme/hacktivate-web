@@ -1,0 +1,101 @@
+//////////////////////////////////////
+//									//
+//			layout.scss 			//
+//		  © Hacktivate 2013			//
+//									//
+//////////////////////////////////////
+
+* {
+	@include box-sizing("border-box");
+}
+
+header {
+	margin-top: -3px;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	position: relative;
+
+	
+	h1 {
+		display: inline-block;
+		position: relative;
+		margin: 0 auto;
+		width: 	368px;
+		height: 100px;
+		background-color: #FFF;
+		fill: #94d31b; 
+
+		@include replace-text(url("../images/logo.svg"));
+
+		background-size: 368px 100px;
+
+		@include to(2) {
+			@include replace-text(url("../images/logo-small.svg"));
+			background-size: 85px 100px;
+			width:85px;
+			overflow: visible;
+		}
+
+		overflow: visible;
+
+
+
+		div {
+			font-family: $heading-font;
+			text-transform: uppercase;
+			font-size: 1.6rem;
+			color: lighten($body-color, 20);
+			text-indent: 0;
+			text-shadow: none;
+		}
+
+
+
+		// background-size: cover;
+	}
+
+	
+	.left-head {
+		position: absolute;
+		left:-100px;	
+		top: 30%;
+	}
+
+	.right-head {
+		position: absolute;
+		right: -80px;
+		top: 30%;
+	}
+}
+
+footer {
+	margin-top: 2rem;
+	padding: 1rem;
+	color: $tertiary;
+	background-color: $primary;
+	@include to(2) {
+		margin-top: 1rem;
+	}
+}
+
+.left {
+	float: left;
+	clear: none;
+}
+
+.right {
+	float: right;
+	clear: none;
+}
+
+.pure-u {
+	padding: 0 2rem;
+
+	@include to(2) {
+		padding: 0 1rem;
+	}
+}
+
+footer .pure-u {
+	padding: 0;
+}

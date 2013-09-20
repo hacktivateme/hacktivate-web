@@ -1,0 +1,63 @@
+//////////////////////////////////////
+//									//
+//			typography.scss			//
+//		  © Hacktivate 2013			//
+//									//
+//////////////////////////////////////
+
+html,body {
+	font-family: $font-stack;
+	font-size: 18px;
+	color: $body-color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+	font-family: $heading-font;
+}
+
+a {
+	color: $primary;
+	text-decoration: none;
+
+	&:hover {
+		color: lighten($primary, 15);
+	}
+	&:active {
+		color: darken($primary, 10);
+	}
+}
+
+h1 {
+	font-size: 3rem;
+	color: $primary;
+	font-weight: normal;
+	@include text-shadow();
+}
+
+h2 {
+	font-size: 4rem;
+	line-height: 4.4rem;
+	color: $primary;
+	margin-bottom: 0.8rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+	line-height: 2.4rem;
+	margin-bottom: 0.8rem;
+	color: $secondary;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+p {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.3rem;
+	margin-bottom: 0.5rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
