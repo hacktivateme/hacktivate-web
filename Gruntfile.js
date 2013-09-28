@@ -16,7 +16,7 @@ module.exports = function (grunt) {
     // configurable paths
     var yeomanConfig = {
         app: 'app',
-        dist: 'dist'
+        dist: 'hacktivateme/static'
     };
 
     grunt.initConfig({
@@ -48,6 +48,9 @@ module.exports = function (grunt) {
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
+            },
+            options: {
+                message: 'Build Succeeded!'
             }
         },
         connect: {
@@ -55,7 +58,7 @@ module.exports = function (grunt) {
                 port: 9000,
                 livereload: 35729,
                 // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -326,6 +329,8 @@ module.exports = function (grunt) {
             ]
         }
     });
+
+    grunt.loadNpmTasks('grunt-notify');
 
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
