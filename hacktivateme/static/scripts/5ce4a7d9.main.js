@@ -1,1 +1,0 @@
-$(function(){$(".box, .rslides > li >  div").css("height",$(window).height()),$(window).resize(function(){$(".box, .rslides > li > div").css("height",$(window).height()),a.refresh()}),$(".rslides").responsiveSlides({auto:!0,speed:500,timeout:4e3,pager:!1,nav:!0,prevText:"<",nextText:">",navContainer:".rslides",manualControls:""});var a=skrollr.init();a.refresh()});

@@ -140,6 +140,10 @@
 		}
 	}
 
+	h5 {
+		margin-top: 1rem;
+	}
+
 }
 
 .box-2 {
@@ -156,13 +160,6 @@
 	}
 }
 
-.box-3 {
-}
-
-.box-4 {
-	background-image: url('../images/display.jpg');
-}
-
 .box-5 {
 	background-image: url('../images/goc-back.jpg');
 	margin-bottom: -5rem;
@@ -170,7 +167,4 @@
 	@include to(3) {
 		margin-bottom: -3rem;
 	}
-
-
-
 }

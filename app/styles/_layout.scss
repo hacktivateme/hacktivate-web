@@ -7,9 +7,9 @@
 @import "compass/layout.scss";
 
 
-@include sticky-footer(5rem, ".wrapper", ".wrap-footer", "footer");
+@include sticky-footer(3rem, ".wrapper", ".wrap-footer", "footer");
 @include to(2) {
-	@include sticky-footer(10rem, ".wrapper", ".wrap-footer", "footer");
+	@include sticky-footer(6rem, ".wrapper", ".wrap-footer", "footer");
 }
 
 * {
@@ -94,19 +94,19 @@ footer {
 	}
 
 	.left {
-		margin: 2rem;
+		margin: 0.8rem;
 	}
 
 	.right {
-		margin-right: 1.2rem;
-		margin-top: 1.1rem;
+		margin-right: 1.4rem;
+		margin-top: 0.6rem;
 	}
 
 	svg {
 		// position: absolute;
 		// top: normal
-		width: 50px;
-		height: 50px;
+		width: 30px;
+		height: 30px;
 		cursor: pointer;
 		@include single-transition(all, 0.4s);
 
@@ -119,8 +119,8 @@ footer {
 			
 		}
 		&:hover {
-			width: 60px;
-			height: 60px;
+			width: 40px;
+			height: 40px;
 			.logo {
 				fill: lighten($tertiary,50);
 			}
