@@ -36,15 +36,15 @@
 
 	&:hover {
 		background: none;
-		border-color: darken(white, 20);
-		color: darken(white, 20);
+		border-color:$primary;
+		color:$primary;
 	}
 
 	&:active {
 		background: none;
-		border-color: darken(white, 30);
-		color: darken(white, 30);
-		@include box-shadow(1px 1px 0 lighten($body-color,5) inset, 1px 1px 0 $body-color);
+		border-color: darken($primary, 10);
+		color: darken($primary, 10);
+		@include box-shadow($primary);
 	}
 }
 
