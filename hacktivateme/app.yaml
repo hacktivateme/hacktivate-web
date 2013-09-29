@@ -1,5 +1,5 @@
 application: hacktivateme
-version: new-website
+version: new
 runtime: python27
 api_version: 1
 threadsafe: yes
