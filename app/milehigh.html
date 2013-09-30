@@ -72,7 +72,7 @@
 
             <div class="registration-form">
                 <h4>Register</h4>
-                <form action="javascript:void();" class="pure-form pure-form-stacked">
+                <form id="register_form" class="pure-form pure-form-stacked">
                     <fieldset>
                         <div class="pure-control-group">
                             <h6>General</h6>
@@ -160,8 +160,10 @@
 
                         <div class="pure-controls">
 
-                            <button type="submit" class="pure-button pure-button-primary" onclick="submitForm()">Enter</button>
+                            <button type="submit" class="pure-button pure-button-primary">Enter</button>
                         </div>
+
+                        <script>$("#register_form").submit(function(event){event.preventDefault();submitContact();});submitForm()</script>
                     </fieldset>
                 </form>
             </div>
