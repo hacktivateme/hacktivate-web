@@ -12,20 +12,14 @@
         <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel=stylesheet type=text/css>
         <link rel=stylesheet href=http://yui.yahooapis.com/pure/0.3.0/pure-min.css>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel=stylesheet href=styles/hacktivate.css>
-        <!-- endbuild -->
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src=bower_components/modernizr/modernizr.js></script>
-        <!-- endbuild -->
+        <link rel="stylesheet" href="styles/d41d8cd9.main.css">
+        <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     
     <body>
 
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src=bower_components/jquery/jquery.js></script>
-        <!-- endbower -->
-        <!-- endbuild -->
+    <script src=http://www.parsecdn.com/js/parse-1.2.12.min.js></script>
+
+        <script src="scripts/1137e1f5.vendor.js"></script>
 
         <!-- Start Content -->
         <div class=wrapper id=skrollr-body>
@@ -90,31 +84,33 @@
         <div class="box box-5">
             <h3>Get in touch.</h3>
             <h5>Your opinion is important to us.</h5>
-                <form class="pure-form pure-form-aligned">
+                <form id=contact_form class="pure-form pure-form-aligned">
                     <fieldset>
                         <div class=pure-control-group>
                             <label for=name>Name</label>
-                            <input id=name placeholder="Who are you!?">
+                            <input id=name placeholder="Who are you!?" required>
                         </div>
 
                         <div class=pure-control-group>
                             <label for=email>Email Address</label>
-                            <input id=email type=email placeholder="We'll get back to you!">
+                            <input id=email type=email placeholder="We'll get back to you!" required>
                         </div>
 
                         <div class=pure-control-group>
                             <label for=message>Message</label>
-                            <textarea rows=3 id=message type=text style="width:205px; max-width: 205px" placeholder="Tell us a tale..."></textarea>
+                            <textarea rows=3 id=message type=text style="width:205px; max-width: 205px" placeholder="Tell us a tale..." required></textarea>
                         </div>
 
                         <div class=pure-controls>
 
-                            <button type=submit class="pure-button pure-button-primary" onclick=submitContact()>Submit</button>
+                            <button type=submit class="pure-button pure-button-primary">Submit</button>
                         </div>
                     </fieldset>
                 </form>
        
     </div>
+
+    <script>$("#contact_form").submit(function(event){event.preventDefault();submitContact();});</script>
         <div class=wrap-footer></div>
 </div>
 
@@ -143,16 +139,10 @@
             ga('create','UA-34837798-1');ga('send','pageview');
         </script>
 
-        <!-- build:js scripts/skrollr.min.js -->
-        <script src=scripts/skrollr.min.js></script>
-        <!-- endbuild -->
+        <script src="scripts/7ed00ece.skrollr.min.js"></script>
 
-        <!-- build:js scripts/slides.js -->
-        <script src=scripts/slides.js></script>
-        <!-- endbuild -->
+        <script src="scripts/c40d4597.slides.js"></script>
 
-        <!-- build:js scripts/main.js -->
-        <script src=scripts/main.js></script>
-        <!-- endbuild -->
+        <script src="scripts/6b896aa5.main.js"></script>
 
 
