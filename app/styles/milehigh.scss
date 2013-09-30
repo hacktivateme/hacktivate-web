@@ -24,8 +24,8 @@ header {
 
 	position: relative;
 
-	svg {
-		height: 80%;
+	img {
+		max-height: 70%;
 	}
 
 	h4 {
@@ -37,6 +37,25 @@ header {
 		padding-bottom: 1.5rem;
 	}
 }
+
+.box-2 {
+	@include background(url(../images/milehigh-takeoff.jpg));
+	background-size: cover;
+}
+
+.box-3 {
+	@include background(url(../images/atc.jpg));
+	background-size: cover;
+
+	h6 {
+		font-size: 1.6rem;
+		line-height: 1.7rem;
+		font-weight: 100;
+
+	}
+}
+
+
 
 footer {
 	// padding: 1rem;
