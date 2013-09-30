@@ -69,9 +69,9 @@ var submitForm = function()
     }
 
     signee.save(null, {failure: function(){
-        $( "<h5>Thanks! We'll be in touch.</h5>" ).replaceAll( ".pure-button-primary" );
+        // $( "<h5>Thanks! We'll be in touch.</h5>" ).replaceAll( ".pure-button-primary" );
     }, success: function(){
-        $( ".pure-button-primary" ).before('<h5>Check the form and try again</h5>');
+        // $( ".pure-button-primary" ).before('<h5>Check the form and try again</h5>');
     }});
 }
 

@@ -33,7 +33,7 @@ header {
 .box-1 {
 
 	&>:first-child {
-		padding-top: 2rem;
+		padding-top: 3rem;
 	}
 
 	@include clearfix();
@@ -72,6 +72,44 @@ header {
 .box-2 {
 	@include background(url(../images/milehigh-takeoff.jpg));
 	background-size: cover;
+	
+	.left, .right {
+		width: 40%;
+		padding-top: 7rem;
+
+		h4 {
+			width: 90%;
+			font-size: 2.8rem;
+			line-height: 3.1rem;
+			text-align: right;
+			padding-bottom: 0;
+		}
+	}
+
+	.left {
+		width: 60%;
+		max-width: 800px;
+		h4 {
+			text-align: left;
+			font-size: 2rem;
+			line-height: 2.2rem;
+			padding-bottom: 1rem;
+		}
+
+		p {
+			font-family: 'Oswald', sans-serif;
+			padding-bottom: 0.5rem;
+			font-weight: 100;
+			font-size: 1.3rem;
+			line-height: 1.6rem;
+			color: white;
+			width: 90%;
+
+			margin: 0 auto;
+			@include text-shadow(black 0 0 3px);
+		}
+	}
+
 }
 
 .box-3 {
