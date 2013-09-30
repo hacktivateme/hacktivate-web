@@ -1,5 +1,10 @@
+@import 'milehighvariables';
 @import 'compass';
 @import 'breakpoint-slicer';
+@import 'layout';
+@import 'boxes';
+@import 'buttons';
+@import 'typography';
 
 	$slicer-breakpoints: 0 400px 700px 800px 1050px;
 
@@ -15,6 +20,8 @@ header {
 	.middle {@include replace-text(url('data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTMycHgiIGhlaWdodD0iMTU3cHgiIHZpZXdCb3g9IjAgMCAxMzIgMTU3IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMzIgMTU3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IHg9IjExLjUiIHk9IjUiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiB3aWR0aD0iMTA5IiBoZWlnaHQ9IjEzOSIvPg0KPHBhdGggZmlsbD0iI0ZGRDExQSIgZD0iTTEzMiwwSDB2MTU3aDEzMlYweiBNODUsMTdoMTl2MjdIODVWMTd6IE0yOSwxN2gxOHYyN0gyOVYxN3ogTTExMywxMzhIMTl2LTE1LjExbDk0LDUuMDM4VjEzOHogTTE5LDEyMlY0OA0KCWg3LjIxMmg1LjAzN2gxNy42NGgzNy43OTJoMjAuMTU2aDUuMDM2SDExM3Y3NEgxOXoiLz4NCjxyZWN0IHg9Ijc4LjU5OCIgeT0iODEuNjM2IiBmaWxsPSIjRkZEMTFBIiB3aWR0aD0iMjcuNjI3IiBoZWlnaHQ9IjI3LjYzIi8+DQo8cmVjdCB4PSIzOS45MTQiIHk9IjgxLjYzNiIgZmlsbD0iI0ZGRDExQSIgd2lkdGg9IjI3LjYzMiIgaGVpZ2h0PSIyNy42MyIvPg0KPC9zdmc+DQo='));
 		@include box-shadow($secondary 2px 2px 0);
 
+		pointer-events:all;
+
 		width: 84px;
 	}
 }
@@ -24,6 +31,22 @@ header {
 }
 
 .box-1 {
+
+	&>:first-child {
+		padding-top: 2rem;
+	}
+
+	@include clearfix();
+
+	.left {
+		width: 75%;
+
+		@include to(3) {
+			width: 100%;
+			float: none;
+		}
+	}
+
 	text-align: center;
 	@include background(radial-gradient(#3a433e, #3a443f, #272c26 100%));
 
@@ -37,9 +60,12 @@ header {
 		text-transform: uppercase;
 		font-size: 2rem;
 		line-height: 2.2rem;
-		margin-top: 0;
-		padding-top: 0;
+		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
+		a {
+			color: $primary;
+			margin: 0 1rem;
+		}
 	}
 }
 
@@ -49,9 +75,13 @@ header {
 }
 
 .box-3 {
-	@include background(url(../images/atc.jpg));
+	@include background(radial-gradient(#3a433e, #3a443f, #272c26 100%));
 	background-size: cover;
 	@include clearfix();
+
+	fieldset {
+		padding-top: 0;
+	}
 
 	form {
 		margin: 0 auto;

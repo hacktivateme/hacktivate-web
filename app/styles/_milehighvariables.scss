@@ -1,0 +1,49 @@
+//////////////////////////////////////
+//									//
+//			variables.scss			//
+//		  © Hacktivate 2013			//
+//									//
+//////////////////////////////////////
+
+//	BREAKPOINTS
+
+	$slicer-breakpoints: 0 400px 700px 800px 1050px;
+
+
+//	COLORS
+
+	$primary: 	#2ecc71;
+	$secondary:	#25a25a;
+	$tertiary: 	#208e4e;
+	$dark: 		#176437;
+	$body-color: #565656;        
+
+
+//	FONTS
+
+	$font-stack: sans-serif;
+	$heading-font: 'Oswald', $font-stack;
+
+//COMPASS
+
+	//	Box Shadows
+		$default-box-shadow-color: $secondary;
+		$default-box-shadow-h-offset: 1px;
+		$default-box-shadow-v-offset: 1px;
+		$default-box-shadow-blur: 0px;
+
+	//	Text Shadows
+		$default-text-shadow-color: $secondary;
+		$default-text-shadow-h-offset: 1px;
+		$default-text-shadow-v-offset: 1px;
+		$default-text-shadow-blur: 0px;
+
+	//	Border Radius
+		$default-border-radius:5px;
+
+	//	Transitions
+		$default-transition-property : all;
+		$default-transition-duration : 1s;
+		$default-transition-function : false;
+		$default-transition-delay    : false;
+
