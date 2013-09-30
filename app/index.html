@@ -90,31 +90,33 @@
         <div class=" box box-5">
             <h3>Get in touch.</h3>
             <h5>Your opinion is important to us.</h5>
-                <form class="pure-form pure-form-aligned">
+                <form id="contact_form" class="pure-form pure-form-aligned">
                     <fieldset>
                         <div class="pure-control-group">
                             <label for="name">Name</label>
-                            <input id="name" type="text" placeholder="Who are you!?">
+                            <input id="name" type="text" placeholder="Who are you!?" required>
                         </div>
 
                         <div class="pure-control-group">
                             <label for="email">Email Address</label>
-                            <input id="email" type="email" placeholder="We'll get back to you!">
+                            <input id="email" type="email" placeholder="We'll get back to you!" required>
                         </div>
 
                         <div class="pure-control-group">
                             <label for="message">Message</label>
-                            <textarea rows="3" id="message" type="text" style="width:205px; max-width: 205px;" placeholder="Tell us a tale..."></textarea>
+                            <textarea rows="3" id="message" type="text" style="width:205px; max-width: 205px;" placeholder="Tell us a tale..." required></textarea>
                         </div>
 
                         <div class="pure-controls">
 
-                            <button type="submit" class="pure-button pure-button-primary" onclick="submitContact()">Submit</button>
+                            <button type="submit" class="pure-button pure-button-primary">Submit</button>
                         </div>
                     </fieldset>
                 </form>
        
     </div>
+
+    <script>$("#contact_form").submit(function(event){event.preventDefault();submitContact();});</script>
         <div class="wrap-footer"></div>
 </div>
 

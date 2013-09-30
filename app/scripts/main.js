@@ -17,7 +17,6 @@ $(function() {
 	  manualControls: "",     // Selector: Declare custom pager navigation
 	});
 
-
 	var s = skrollr.init();
 	s.refresh();
 });

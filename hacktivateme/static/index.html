@@ -12,12 +12,20 @@
         <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel=stylesheet type=text/css>
         <link rel=stylesheet href=http://yui.yahooapis.com/pure/0.3.0/pure-min.css>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/2262b1ae.main.css">
-        <script src="scripts/vendor/f7f27360.modernizr.js"></script>
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel=stylesheet href=styles/hacktivate.css>
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src=bower_components/modernizr/modernizr.js></script>
+        <!-- endbuild -->
     
     <body>
 
-        <script src="scripts/1137e1f5.vendor.js"></script>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src=bower_components/jquery/jquery.js></script>
+        <!-- endbower -->
+        <!-- endbuild -->
 
         <!-- Start Content -->
         <div class=wrapper id=skrollr-body>
@@ -101,7 +109,7 @@
 
                         <div class=pure-controls>
 
-                            <button type=submit class="pure-button pure-button-primary">Submit</button>
+                            <button type=submit class="pure-button pure-button-primary" onclick=submitContact()>Submit</button>
                         </div>
                     </fieldset>
                 </form>
@@ -135,10 +143,16 @@
             ga('create','UA-34837798-1');ga('send','pageview');
         </script>
 
-        <script src="scripts/7ed00ece.skrollr.min.js"></script>
+        <!-- build:js scripts/skrollr.min.js -->
+        <script src=scripts/skrollr.min.js></script>
+        <!-- endbuild -->
 
-        <script src="scripts/c40d4597.slides.js"></script>
+        <!-- build:js scripts/slides.js -->
+        <script src=scripts/slides.js></script>
+        <!-- endbuild -->
 
-        <script src="scripts/1d43f9b7.main.js"></script>
+        <!-- build:js scripts/main.js -->
+        <script src=scripts/main.js></script>
+        <!-- endbuild -->
 
 
