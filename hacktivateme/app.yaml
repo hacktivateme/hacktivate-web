@@ -193,6 +193,6 @@ handlers:
  
 # site root
 - url: /
-  static_files: static/index.html
-  upload: static/index.html
+  static_files: static/index.htm
+  upload: static/index.htm
   expiration: "15m"
