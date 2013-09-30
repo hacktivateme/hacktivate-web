@@ -22,7 +22,6 @@ $(function() {
 	s.refresh();
 });
 
-
 Parse.initialize("unrBecgZTNcb5QjJFnolAqsg5i8BoToRlz2K4ZSv", "riitwpfPnYb4gwZNTxNK7QaO0LRHP9YXsA8sy3hl");
 var ContactRequest = Parse.Object.extend("ContactRequest");
 
