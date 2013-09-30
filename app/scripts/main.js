@@ -54,7 +54,6 @@ var submitForm = function()
         "designer_biggest_design_influence"
     ];
 
-
     var signee = isDeveloper ? new Developer() : new Designer();
 
     for(var i = 0;i < genericList.length;i++)
