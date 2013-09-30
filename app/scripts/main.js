@@ -20,11 +20,6 @@ $(function() {
 
 	var s = skrollr.init();
 	s.refresh();
-
-
-
-
-
 });
 
 
@@ -34,28 +29,28 @@ var Designer = Parse.Object.extend("Designer");
 
 var submitForm = function()
 {
-    var isDeveloper = $("#developer-radio").is(':checked');
+    var isDeveloper = $("#developer_radio").is(':checked');
 
     var genericList = [
         "name",
-        "email-address",
-        "phone-number",
-        "twitter-handle",
-        "personal-website",
-        "favourite-project",
-        "what-do-you-do"
+        "email_address",
+        "phone_number",
+        "twitter_handle",
+        "personal_website",
+        "favourite_project",
+        "what_do_you_do"
     ];
 
     var devSpecificList = [
-        "dev-github",
-        "dev-skills-and-tools",
-        "dev-fav-hacker"
+        "dev_github",
+        "dev_skills_and_tools",
+        "dev_fav_hacker"
     ];
 
     var designerSpecificList = [
-        "designer-portfolio",
-        "designer-skills-and-tools",
-        "designer-biggest-design-influence"
+        "designer_portfolio",
+        "designer_skills_and_tools",
+        "designer_biggest_design_influence"
     ];
 
 
