@@ -65,7 +65,7 @@
             ];
 
 
-            var signee = isDeveloper ? new Developer() : new Designer();
+            var signee = isDeveloper ? (new Developer()) : new (Designer());
 
             for(var i = 0;i < genericList.length;i++)
                 signee.set(genericList[i], $("#" + genericList[i]).val());
