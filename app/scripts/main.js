@@ -21,3 +21,25 @@ $(function() {
 	var s = skrollr.init();
 	s.refresh();
 });
+
+
+Parse.initialize("unrBecgZTNcb5QjJFnolAqsg5i8BoToRlz2K4ZSv", "riitwpfPnYb4gwZNTxNK7QaO0LRHP9YXsA8sy3hl");
+var Developer = Parse.Object.extend("Developer");
+var Designer = Parse.Object.extend("Designer");
+var ContactRequest = Parse.Object.extend("ContactRequest");
+
+var submitContact = function()
+{
+    var contactRequest = new ContactRequest();
+
+    var genericList = [
+        "name",
+        "email",
+        "message"
+    ];
+
+    for(var i = 0;i < genericList.length;i++)
+        contactRequest.set(genericList[i], $("#" + genericList[i]).val());
+
+    contactRequest.save(null, {success: function(){}, error: function(){}});
+}
