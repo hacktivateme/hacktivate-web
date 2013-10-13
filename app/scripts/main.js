@@ -1,9 +1,4 @@
 $(function() {
-	$('.box, .rslides > li >  div').not('.register').css("height", $(window).height());
-	$( window ).resize(function() {
-		$('.box, .rslides > li > div').not('.register').css("height", $(window).height());
-		s.refresh();
-	});
 
 	$(".rslides").responsiveSlides({
 	  auto: true,             // Boolean: Animate automatically, true or false
@@ -17,8 +12,6 @@ $(function() {
 	  manualControls: "",     // Selector: Declare custom pager navigation
 	});
 
-	var s = skrollr.init();
-	s.refresh();
 });
 
 Parse.initialize("unrBecgZTNcb5QjJFnolAqsg5i8BoToRlz2K4ZSv", "riitwpfPnYb4gwZNTxNK7QaO0LRHP9YXsA8sy3hl");

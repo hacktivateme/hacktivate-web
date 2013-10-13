@@ -30,7 +30,7 @@ header {
 	padding-bottom: 1.5rem;
 	text-align: center;
 
-	position: fixed;
+	position: absolute;
 
 	@include to(2) {
 		position: absolute;
@@ -45,9 +45,9 @@ header {
 
 		width: 	368px;
 		height: 100px;
-		margin: 0 0 0 10%;
+		margin: 0 0 0 1.5rem;
 		position: relative;
-		
+
 		@include replace-text(url('data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI1ODNweCIgaGVpZ2h0PSIxNTdweCIgdmlld0JveD0iMCAwIDU4MyAxNTciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU4MyAxNTciIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cmVjdCB4PSI3LjYwNSIgeT0iMSIgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHdpZHRoPSI1NzQuMzk1IiBoZWlnaHQ9IjE0OC4wODciLz4KPGc+Cgk8cGF0aCBmaWxsPSIjMkVDQzcxIiBkPSJNMCwwdjE1N2g1ODNWMEgweiBNODUsMTdoMTl2MjdIODVWMTd6IE0yOSwxN2gxOHYyN0gyOVYxN3ogTTExMywxMzhIMTl2LTE1LjExbDk0LDUuMDM4VjEzOHogTTExMywxMjJIMTkKCQlWNDhoNy4yMTJoNS4wMzdoMTcuNjRoMzcuNzkyaDIwLjE1OGg1LjAzNkgxMTNWMTIyeiBNMTc5LDEzNWgtMTJ2LTIxaC0xNXYyMWgtMTRWODJoMTR2MjBoMTVWODJoMTJWMTM1eiBNMjI0Ljg0MywxMzUKCQlsLTcuNjYxLTIxLjQ3NWwtMTAuNjgsMC4yNDJMMTk4Ljc3NywxMzVoLTEzLjg4MmwxOS44ODktNTNoMTQuMTJsMTkuODE3LDUzSDIyNC44NDN6IE0yNTAuNjYxLDExNi4wMQoJCWMwLjQ3OSwxLjE2MywxLjYxNSwyLjE4NSwyLjQ3LDMuMDYyYzAuODU0LDAuODc5LDIuMDgxLDEuNTc0LDMuMjEsMi4wODVjMS4xMjksMC41MSwyLjQ1NSwwLjc2NiwzLjczNiwwLjc2NgoJCWMxLjI3OCwwLDIuNTM0LTAuMjU2LDMuNjUyLTAuNzY2YzEuMTItMC41MTEsMi4xMjYtMS4yMDYsMi45NjctMi4wODVjMC44NDEtMC44NzcsMS41MjEtMS4wNTMsMi4wMTEtMi4yMTUKCQljMC40ODgtMS4xNjIsMC43NS0wLjg1NiwwLjc1LTIuODU2aDEyLjkyOGMwLDMtMC41NDEsNC44NDQtMS42MTksNy40NjZjLTEuMDc0LDIuNjI2LTIuNjY1LDQuNTU5LTQuNzcxLDYuNjQ3CgkJYy0yLjEwNCwyLjA4OC00LjUwNSw0LjM5NC03LjE5Nyw1LjUwOWMtMi42OTEsMS4xMTctNS41NTMsMi4zNzgtOC41ODMsMi4zNzhoLTAuMDc4Yy0zLjAzLDAtNS44OC0xLjQ3Mi04LjU0OC0yLjU4OQoJCWMtMi42NjctMS4xMTUtNS4wNzgtMy4xNzYtNy4yMzMtNS4yNjRjLTIuMDA0LTIuMDQzLTQuNTM4LTQuNTY1LTUuNjQxLTcuMTE5Yy0xLjEwMy0yLjU1MS0yLjcxNC01LjQ2OS0yLjcxNC04LjI5NXYtMTEuMjE3CgkJYzAtMi45MjEsMS42MDQtNS42NjgsMi42OTItOC4yNDZjMS4wODgtMi41NzQsMy4xNDItNC44ODIsNS4xNy02LjkyNmMyLjE1Ni0yLjA4OCw0LjgxMy0yLjYxMSw3LjQ3OS0zLjczOAoJCWMyLjY2OC0xLjEyNyw1Ljc2My0wLjYwNiw4Ljc5My0wLjYwNmgwLjA3OGMzLjAzLDAsNS44OTItMC41MjYsOC41ODMsMC41ODhjMi42OTIsMS4xMTUsNS4wOTQsMi4xODcsNy4xOTcsNC4zCgkJYzIuMTA2LDIuMDksMy42OTcsNS4zMSw0Ljc3MSw3LjkzNWMxLjA3OCwyLjYyMywxLjYxOSw1LjE3OCwxLjYxOSw5LjE3OGgtMTIuOTI4YzAtMy0wLjI0NS0zLjY4MS0wLjczNC00Ljg1NAoJCWMtMC40ODktMS4xNzUtMS4xNTUtMi43Ny0xLjk5Ni0zLjY0OGMtMC44NC0wLjg3OC0xLjgxMi0xLjg1Ny0yLjkxNy0yLjM2N2MtMS4xMDQtMC41MTEtMi4zMTEtMC45MS0zLjYxNS0wLjkxCgkJYy0xLjI4LDAtMi40ODYsMC4xODgtMy42MTcsMC42OTZjLTEuMTMsMC41MTItMi4xMTksMS4xNjgtMi45NzMsMi4wNDdjLTAuODU0LDAuODc4LTIuNDY1LDEuODg0LTIuOTQzLDMuMDQ1CgkJYy0wLjQ3OCwxLjE2My0xLjY2MSwyLjM5Mi0xLjY2MSwzLjcydjEwLjU4QzI0OSwxMTMuNjEyLDI1MC4xODQsMTE0Ljg0NywyNTAuNjYxLDExNi4wMXogTTMyNy4yNDgsMTM1aC0xMi45MjZMMjk4LDExOC43MTZWMTM1CgkJaC0xM1Y4MmgxM3YxMy4zOUwzMTQuMzk1LDgyaDEyLjkyNmwtMjQuMzg1LDI2LjU3TDMyNy4yNDgsMTM1eiBNMzY2LDk0aC0xM3Y0MWgtMTJWOTRoLTEzVjgyaDM4Vjk0eiBNMzg1LDEzNWgtMTJWODJoMTJWMTM1egoJCSBNNDEzLjAyMSwxMzVsLTE5Ljk3NC01M2gxMi44OTNsMTMuNjA1LDM2Ljk0Nkw0MzMuMDY4LDgyaDEyLjg5MmwtMTkuODgsNTNINDEzLjAyMXogTTQ3Ni43MjgsMTM1bC03LjY2MS0yMS40NzVsLTEwLjY3NywwLjI0MgoJCUw0NTAuNjYyLDEzNWgtMTMuODc5bDE5Ljg4OC01M2gxNC4xMjJsMTkuODEyLDUzSDQ3Ni43Mjh6IE01MjMsOTRoLTEzdjQxaC0xM1Y5NGgtMTNWODJoMzlWOTR6IE01NjIsOTRoLTIxdjhoMTV2MTJoLTE1djloMjF2MTIKCQloLTM0VjgyaDM0Vjk0eiIvPgoJPHJlY3QgeD0iNzguNTk3IiB5PSI4MS42MzYiIGZpbGw9IiMyRUNDNzEiIHdpZHRoPSIyNy42MjgiIGhlaWdodD0iMjcuNjMiLz4KCTxyZWN0IHg9IjM5LjkxNCIgeT0iODEuNjM2IiBmaWxsPSIjMkVDQzcxIiB3aWR0aD0iMjcuNjMyIiBoZWlnaHQ9IjI3LjYzIi8+CjwvZz4KPC9zdmc+'));
 
 		@include box-shadow();
@@ -61,18 +61,6 @@ header {
 			background-size: 85px 100px;
 			width:85px;
 			overflow: visible;
-		}
-
-		.right-head {
-			position: absolute;
-			right: -6.8rem;
-			top: 30%;
-		}
-
-		.left-head {
-			position: absolute;
-			left:-100px;	
-			top: 30%;
 		}
 	}
 
@@ -117,7 +105,7 @@ footer {
 
 		.logo {
 			fill: #2ECC71;
-			
+
 		}
 		&:hover {
 			width: 40px;
@@ -129,15 +117,20 @@ footer {
 	}
 
 	@include clearfix();
+
+    .right, .left {
+        @include to(2) {
+            text-align: center;
+        }
+    }
 }
 
 .left {
 	float: left;
 	clear: none;
-	
+
 	@include to(2) {
 		float: none;
-		text-align: center;
 	}
 
 }
@@ -148,17 +141,7 @@ footer {
 
 	@include to(2) {
 		float: none;
-		text-align: center;
-		margin-bottom: 3em;
 	}
 }
 
-
-.pure-u {
-	padding: 0 2rem;
-
-	@include to(2) {
-		padding: 0 1rem;
-	}
-}
 

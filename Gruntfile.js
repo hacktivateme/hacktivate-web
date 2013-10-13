@@ -209,7 +209,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= yeoman.dist %>'
             },
-            html: '<%= yeoman.app %>/index.html'
+            html: '<%= yeoman.app %>/*.html'
         },
         usemin: {
             options: {
@@ -255,10 +255,10 @@ module.exports = function (grunt) {
                     // https://github.com/yeoman/grunt-usemin/issues/44
                     //collapseWhitespace: true,
                     collapseBooleanAttributes: true,
-                    removeAttributeQuotes: true,
-                    removeRedundantAttributes: true,
+                    removeAttributeQuotes: false,
+                    removeRedundantAttributes: false,
                     useShortDoctype: true,
-                    removeEmptyAttributes: true,
+                    removeEmptyAttributes: false,
                     removeOptionalTags: true
                 },
                 files: [{
@@ -363,7 +363,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('default', [
-        'jshint',
+        // 'jshint',
         'test',
         'build'
     ]);
