@@ -200,7 +200,8 @@
 }
 
 .box-4 {
-    background-image: url('../images/goc-back.jpg');
+    background-image: url('../images/test.jpg');
+    background-size: cover;
 }
 
 .box-5 {
@@ -213,19 +214,36 @@
     clear: both;
     color: white;
 
+
+    @include to(2) {
+        text-align: center;
+    }
+
     h6 {
         font-size: 3rem;
+        line-height: 2.5rem;
         padding-top: 1rem;
         font-weight: lighter;
         small {
             font-size: 1.6rem;
             text-transform: uppercase;
             padding-left: 0.5rem;
+
+            @include to(2) {
+                padding-left: 0;
+            }
         }
+
     }
 
     img {
         float: left;
         padding-right: 2rem;
+
+        @include to(2) {
+            float: none;
+            padding-right: 0;
+            text-align: center;
+        }
     }
 }
