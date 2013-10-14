@@ -206,3 +206,26 @@
 .box-5 {
 	background-image: url('../images/goc-back.jpg');
 }
+
+.testimonial {
+    width: 75%;
+    margin: 1rem auto;
+    clear: both;
+    color: white;
+
+    h6 {
+        font-size: 3rem;
+        padding-top: 1rem;
+        font-weight: lighter;
+        small {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            padding-left: 0.5rem;
+        }
+    }
+
+    img {
+        float: left;
+        padding-right: 2rem;
+    }
+}
