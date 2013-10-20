@@ -50,9 +50,10 @@ var submitForm = function()
     }
 
     signee.save(null, {failure: function(){
-        // $( "<h5>Thanks! We'll be in touch.</h5>" ).replaceAll( ".pure-button-primary" );
+        $('.error-submit').remove();
+        $( ".pure-button-primary" ).before('<h5 class="error-submit">Check the form and try again</h5>');
     }, success: function(){
-        // $( ".pure-button-primary" ).before('<h5>Check the form and try again</h5>');
+        $( "<h5>Thanks! We'll be in touch.</h5>" ).replaceAll( ".pure-button-primary" );
     }});
 }
 
