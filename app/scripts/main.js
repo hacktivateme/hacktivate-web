@@ -30,5 +30,10 @@ var submitContact = function()
     for(var i = 0;i < genericList.length;i++)
         contactRequest.set(genericList[i], $("#" + genericList[i]).val());
 
-    contactRequest.save(null, {success: function(){}, error: function(){}});
+    contactRequest.save(null, {success: function(){
+        $("<h5 class=\"confirmation\">Cheers for the message, we'll be in touch!</h5>").replaceAll('.button-contact-submit');
+    }, error: function(){
+        $("h5.error h5.confirmation").remove();
+        $('.button-contact-submit').after("<h5 class=\"error\">Looks like we struggled to send that. If you keep having problems, <a href=\"mailto:hi@hacktivate.me\">use old school email.</a></h5>");
+    }});
 }
